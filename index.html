@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Para ti, mi amor</title>
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap">
+
   <style>
     :root {
       --bg: #fff2ee;
@@ -19,10 +21,15 @@
       --wax: #c2335f;
       --ok: #4f9a5c;
       --bad: #c2335f;
-      --bgimg: radial-gradient(circle at 15% 0%, #ffcfe0 0, transparent 45%), radial-gradient(circle at 100% 35%, #ffdcca 0, transparent 45%), radial-gradient(circle at 0% 85%, #ffd0e2 0, transparent 45%);
+
+      --bgimg:
+        radial-gradient(circle at 15% 0%, #ffcfe0 0, transparent 45%),
+        radial-gradient(circle at 100% 35%, #ffdcca 0, transparent 45%),
+        radial-gradient(circle at 0% 85%, #ffd0e2 0, transparent 45%);
+
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
-      padding-bottom: env(safe-area-inset-bottom, 0px)
+      padding-bottom: env(safe-area-inset-bottom, 0px);
     }
 
     @media(prefers-color-scheme:dark) {
@@ -34,7 +41,7 @@
         --rose: #ff8fb3;
         --gold: #f0b8a0;
         --line: #5c3f48;
-        --bgimg: linear-gradient(transparent, transparent)
+        --bgimg: linear-gradient(transparent, transparent);
       }
     }
 
@@ -46,16 +53,16 @@
       --rose: #ff8fb3;
       --gold: #f0b8a0;
       --line: #5c3f48;
-      --bgimg: linear-gradient(transparent, transparent)
+      --bgimg: linear-gradient(transparent, transparent);
     }
 
     html {
       scroll-padding-top: env(safe-area-inset-top, 0px);
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
     }
 
     * {
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     body {
@@ -65,11 +72,11 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 1.22rem;
       line-height: 1.6;
-      overflow-x: hidden
+      overflow-x: hidden;
     }
 
     body.lock {
-      overflow: hidden
+      overflow: hidden;
     }
 
     main {
@@ -77,55 +84,64 @@
       margin: 0 auto;
       padding: 0 20px 60px;
       position: relative;
-      z-index: 2
+      z-index: 2;
     }
 
     section {
       padding: 46px 0;
-      text-align: center
+      text-align: center;
     }
 
     .script {
       font-family: "Great Vibes", "Snell Roundhand", cursive;
       font-weight: 400;
-      color: var(--rose)
+      color: var(--rose);
     }
 
     .shine {
-      background: linear-gradient(100deg, var(--rose) 20%, var(--gold) 45%, #fff0e8 50%, var(--gold) 55%, var(--rose) 80%);
+      background:
+        linear-gradient(
+          100deg,
+          var(--rose) 20%,
+          var(--gold) 45%,
+          #fff0e8 50%,
+          var(--gold) 55%,
+          var(--rose) 80%
+        );
+
       background-size: 250% 100%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: shine 5s linear infinite
+      animation: shine 5s linear infinite;
     }
 
     @keyframes shine {
       to {
-        background-position: -250% 0
+        background-position: -250% 0;
       }
     }
 
     h1 {
       font-size: clamp(3rem, 13vw, 4.6rem);
       margin: 6px 0;
-      line-height: 1.05
+      line-height: 1.05;
     }
 
     h2 {
       font-size: 2.5rem;
-      margin: 0
+      margin: 0;
     }
 
     .orn {
       color: var(--gold);
       letter-spacing: .5em;
-      margin: 8px 0 22px
+      margin: 8px 0 22px;
     }
 
     .sub {
       color: var(--soft);
-      font-style: italic
+      font-style: italic;
     }
 
     .frame {
@@ -136,44 +152,44 @@
       border-radius: 4px;
       padding: 22px 18px;
       margin: 8px 5px;
-      box-shadow: 0 8px 26px #e5568c26
+      box-shadow: 0 8px 26px #e5568c26;
     }
 
     .rv {
       opacity: 0;
       transform: translateY(26px);
-      transition: opacity 1s ease, transform 1s ease
+      transition: opacity 1s ease, transform 1s ease;
     }
 
     .rv.in {
       opacity: 1;
-      transform: none
+      transform: none;
     }
 
     .heart {
       display: inline-block;
       color: var(--wax);
       font-size: 2.6rem;
-      animation: beat 1.5s infinite
+      animation: beat 1.5s infinite;
     }
 
     @keyframes beat {
 
       0%,
       100% {
-        transform: scale(1)
+        transform: scale(1);
       }
 
       15% {
-        transform: scale(1.25)
+        transform: scale(1.25);
       }
 
       30% {
-        transform: scale(1)
+        transform: scale(1);
       }
 
       45% {
-        transform: scale(1.15)
+        transform: scale(1.15);
       }
     }
 
@@ -181,37 +197,51 @@
       position: fixed;
       inset: 0;
       z-index: 50;
-      background: radial-gradient(circle at 50% 40%, #fbe0e0, #e3a9b8 80%);
+      background:
+        radial-gradient(circle at 50% 40%, #fbe0e0, #e3a9b8 80%);
+
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: calc(20px + env(safe-area-inset-top, 0px)) 20px calc(20px + env(safe-area-inset-bottom, 0px));
+
+      padding:
+        calc(20px + env(safe-area-inset-top, 0px))
+        20px
+        calc(20px + env(safe-area-inset-bottom, 0px));
+
       transition: opacity 1.2s, visibility 1.2s;
       cursor: pointer;
-      text-align: center
+      text-align: center;
     }
 
     #intro.gone {
       opacity: 0;
-      visibility: hidden
+      visibility: hidden;
     }
 
     .env {
       width: min(84vw, 340px);
-      background: linear-gradient(160deg, #fff6f2, #f3d9cf);
+
+      background:
+        linear-gradient(160deg, #fff6f2, #f3d9cf);
+
       border: 1px solid #c99a88;
       outline: 1px solid #c99a8899;
       outline-offset: 6px;
       border-radius: 4px;
+
       padding: 38px 16px 30px;
+
       color: #5a3a40;
+
       box-shadow: 0 20px 60px #a8496655;
-      animation: float 4s ease-in-out infinite
+
+      animation: float 4s ease-in-out infinite;
     }
 
     @keyframes float {
       50% {
-        transform: translateY(-8px)
+        transform: translateY(-8px);
       }
     }
 
@@ -220,21 +250,33 @@
       height: 78px;
       line-height: 78px;
       font-size: 2.2rem;
-      margin: 16px auto 6px
+      margin: 16px auto 6px;
     }
 
     .seal {
       display: block;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #dd6d84, var(--wax) 70%);
+
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          #dd6d84,
+          var(--wax) 70%
+        );
+
       color: #f7dfc0;
       text-align: center;
-      box-shadow: 0 3px 8px #0006, inset 0 0 0 4px #ffffff22;
+
+      box-shadow:
+        0 3px 8px #0006,
+        inset 0 0 0 4px #ffffff22;
+
       width: 54px;
       height: 54px;
       line-height: 54px;
+
       font-size: 1.5rem;
-      margin: 0 auto 12px
+      margin: 0 auto 12px;
     }
 
     .tap {
@@ -243,12 +285,12 @@
       letter-spacing: .2em;
       text-transform: uppercase;
       color: #7d6672;
-      animation: blink 2s infinite
+      animation: blink 2s infinite;
     }
 
     @keyframes blink {
       50% {
-        opacity: .35
+        opacity: .35;
       }
     }
 
@@ -258,11 +300,11 @@
       inset: 0;
       pointer-events: none;
       z-index: 1;
-      overflow: hidden
+      overflow: hidden;
     }
 
     #confetti {
-      z-index: 70
+      z-index: 70;
     }
 
     .p {
@@ -270,12 +312,14 @@
       top: -30px;
       border-radius: 150% 0 150% 0;
       opacity: .95;
-      animation: fall linear infinite
+      animation: fall linear infinite;
     }
 
     @keyframes fall {
       to {
-        transform: translate3d(var(--dx), 110vh, 0) rotate(540deg)
+        transform:
+          translate3d(var(--dx), 110vh, 0)
+          rotate(540deg);
       }
     }
 
@@ -283,19 +327,22 @@
       position: absolute;
       top: -40px;
       font-size: 1.6rem;
-      animation: fallonce linear forwards
+      animation: fallonce linear forwards;
     }
 
     @keyframes fallonce {
       to {
-        transform: translate3d(var(--dx), 108vh, 0) rotate(360deg);
-        opacity: 0
+        transform:
+          translate3d(var(--dx), 108vh, 0)
+          rotate(360deg);
+
+        opacity: 0;
       }
     }
 
     .big {
       font-size: clamp(1.5rem, 6vw, 1.9rem);
-      line-height: 1.35
+      line-height: 1.35;
     }
 
     .chips {
@@ -303,7 +350,7 @@
       flex-wrap: wrap;
       gap: 8px;
       justify-content: center;
-      margin: 16px 0
+      margin: 16px 0;
     }
 
     .chips span {
@@ -311,84 +358,95 @@
       border-radius: 999px;
       padding: 4px 16px;
       background: var(--card);
-      color: var(--rose)
+      color: var(--rose);
     }
 
     .traits {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
-      margin-top: 6px
+      margin-top: 6px;
     }
 
     .traits .frame {
       margin: 4px;
-      padding: 16px 10px
+      padding: 16px 10px;
     }
 
     .traits b {
       display: block;
       color: var(--gold);
-      font-size: 1.3rem
+      font-size: 1.3rem;
     }
 
     .traits small {
       color: var(--soft);
       font-size: 1rem;
       line-height: 1.3;
-      display: block
+      display: block;
     }
 
     .breath {
       width: 150px;
       height: 150px;
       margin: 20px auto;
+
       border-radius: 50%;
       border: 1px solid var(--gold);
-      background: radial-gradient(circle, var(--rose), transparent 70%);
+
+      background:
+        radial-gradient(
+          circle,
+          var(--rose),
+          transparent 70%
+        );
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       color: var(--ink);
       font-size: 1.3rem;
+
       transform: scale(.6);
       opacity: .7;
-      cursor: pointer
+      cursor: pointer;
     }
 
     .breath.on {
-      animation: breathe 12s ease-in-out infinite
+      animation: breathe 12s ease-in-out infinite;
     }
 
     @keyframes breathe {
+
       0% {
-        transform: scale(.6)
+        transform: scale(.6);
       }
 
       33%,
       66% {
-        transform: scale(1.15)
+        transform: scale(1.15);
       }
 
       100% {
-        transform: scale(.6)
+        transform: scale(.6);
       }
     }
 
     .grid {
       display: grid;
-      gap: 14px
+      gap: 14px;
     }
 
     .ow {
       cursor: pointer;
-      text-align: center
+      text-align: center;
     }
 
     .ow b {
       display: block;
       font-size: 1.3rem;
-      color: var(--gold)
+      color: var(--gold);
     }
 
     .ow p {
@@ -396,292 +454,359 @@
       max-height: 0;
       overflow: hidden;
       opacity: 0;
-      transition: max-height .7s, opacity .7s;
-      color: var(--soft)
+
+      transition:
+        max-height .7s,
+        opacity .7s;
+
+      color: var(--soft);
     }
 
     .ow.open p {
       max-height: 220px;
-      opacity: 1
+      opacity: 1;
     }
 
     .ow .sm {
       font-size: .85rem;
       letter-spacing: .15em;
       text-transform: uppercase;
-      color: var(--soft)
+      color: var(--soft);
     }
 
     .list {
       list-style: none;
       padding: 0;
       margin: 0;
-      text-align: left
+      text-align: left;
     }
 
     .list li {
       padding: 11px 4px;
-      border-bottom: 1px dotted var(--gold)
+      border-bottom: 1px dotted var(--gold);
     }
 
     .list li:last-child {
-      border: 0
+      border: 0;
     }
 
     .list li::before {
       content: "✦ ";
-      color: var(--rose)
+      color: var(--rose);
     }
 
     button {
       font-family: inherit;
       font-size: 1.2rem;
+
       background: var(--rose);
       color: #fff;
+
       border: 1px solid var(--gold);
       border-radius: 999px;
+
       padding: 12px 30px;
+
       cursor: pointer;
-      letter-spacing: .05em
+      letter-spacing: .05em;
     }
 
     button:disabled {
       background: #c9c1c4;
       border-color: #c9c1c4;
       cursor: not-allowed;
-      opacity: .7
+      opacity: .7;
     }
 
     #msg {
       display: none;
       margin-top: 26px;
-      text-align: left
+      text-align: left;
     }
 
     #msg.show {
-      display: block
+      display: block;
     }
 
     #typed {
       min-height: 13em;
-      white-space: pre-wrap
+      white-space: pre-wrap;
     }
 
     .sign {
       font-size: 2.1rem;
       text-align: right;
       margin: 8px 0 0;
+
       opacity: 0;
-      transition: opacity 2s
+      transition: opacity 2s;
     }
 
     .sign.in {
-      opacity: 1
+      opacity: 1;
     }
 
     #gift {
       display: none;
-      margin-top: 30px
+      margin-top: 30px;
     }
 
     #gift.show {
-      display: block
+      display: block;
     }
 
     #gift svg {
       width: min(88vw, 340px);
       height: auto;
-      filter: drop-shadow(0 10px 14px #0004)
+      filter: drop-shadow(0 10px 14px #0004);
     }
 
     .bl {
       transform-box: fill-box;
       transform-origin: center;
       transform: scale(0);
-      animation: bloom 1.2s cubic-bezier(.3, 1.5, .5, 1) forwards
+
+      animation:
+        bloom 1.2s cubic-bezier(.3, 1.5, .5, 1)
+        forwards;
     }
 
     @keyframes bloom {
       to {
-        transform: scale(1)
+        transform: scale(1);
       }
     }
 
     #mbtn {
       display: none;
+
       position: fixed;
       z-index: 60;
+
       top: calc(12px + env(safe-area-inset-top, 0px));
       right: 14px;
+
       width: 44px;
       height: 44px;
+
       padding: 0;
       font-size: 1.2rem;
+
       border-radius: 50%;
+
       background: var(--card);
       border: 1px solid var(--gold);
-      box-shadow: 0 4px 14px #e5568c33
+
+      box-shadow: 0 4px 14px #e5568c33;
     }
 
     footer {
       text-align: center;
       color: var(--soft);
-      font-style: italic
+      font-style: italic;
     }
 
-    /* ---- countdown ---- */
+    /* CONTADOR */
+
     .cd {
       display: flex;
       gap: 10px;
       justify-content: center;
+
       margin: 18px 0 6px;
-      flex-wrap: wrap
+
+      flex-wrap: wrap;
     }
 
     .cd .box {
       background: var(--card);
       border: 1px solid var(--gold);
       border-radius: 10px;
+
       padding: 12px 14px;
-      min-width: 68px
+      min-width: 68px;
     }
 
     .cd .box b {
       display: block;
       font-size: 1.9rem;
-      color: var(--rose)
+      color: var(--rose);
     }
 
     .cd .box small {
       color: var(--soft);
       font-size: .85rem;
       letter-spacing: .1em;
-      text-transform: uppercase
+      text-transform: uppercase;
     }
 
-    /* ---- gallery ---- */
+    /* GALERÍA */
+
     .gal {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px
+      gap: 12px;
     }
 
     .gal .ph {
       aspect-ratio: 1/1;
+
       border-radius: 8px;
       border: 1px solid var(--gold);
-      background: linear-gradient(140deg, #ffd6e2, #ffe6d6);
+
+      background:
+        linear-gradient(
+          140deg,
+          #ffd6e2,
+          #ffe6d6
+        );
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       font-size: 2.2rem;
       color: var(--rose);
-      overflow: hidden
+
+      overflow: hidden;
     }
 
     .gal .ph img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block
+      display: block;
     }
 
-    /* ---- timeline ---- */
+    /* TIMELINE */
+
     .tl {
       text-align: left;
+
       margin: 10px auto 0;
       max-width: 460px;
+
       position: relative;
-      padding-left: 26px
+      padding-left: 26px;
     }
 
     .tl::before {
       content: "";
+
       position: absolute;
+
       left: 7px;
       top: 6px;
       bottom: 6px;
+
       width: 2px;
-      background: var(--line)
+
+      background: var(--line);
     }
 
     .tl .ev {
       position: relative;
-      padding-bottom: 22px
+      padding-bottom: 22px;
     }
 
     .tl .ev:last-child {
-      padding-bottom: 0
+      padding-bottom: 0;
     }
 
     .tl .ev::before {
       content: "";
+
       position: absolute;
+
       left: -26px;
       top: 4px;
+
       width: 14px;
       height: 14px;
+
       border-radius: 50%;
+
       background: var(--rose);
+
       border: 3px solid var(--card);
-      box-shadow: 0 0 0 1px var(--gold)
+
+      box-shadow:
+        0 0 0 1px var(--gold);
     }
 
     .tl .ev b {
       display: block;
+
       color: var(--gold);
+
       font-size: 1rem;
+
       letter-spacing: .1em;
-      text-transform: uppercase
+
+      text-transform: uppercase;
     }
 
     .tl .ev p {
       margin: 2px 0 0;
-      color: var(--ink)
+      color: var(--ink);
     }
 
-    /* ---- progreso / unlock ---- */
+    /* PROGRESO */
+
     .prog {
       max-width: 300px;
+
       margin: 4px auto 18px;
+
       height: 10px;
+
       border-radius: 999px;
+
       background: var(--line);
-      overflow: hidden
+
+      overflow: hidden;
     }
 
     .prog i {
       display: block;
+
       height: 100%;
       width: 0%;
+
       background: var(--rose);
-      transition: width .5s
+
+      transition: width .5s;
     }
 
     .hint {
       color: var(--soft);
-      font-size: .95rem
+      font-size: .95rem;
     }
 
-    /* ---- whatsapp share ---- */
+    /* WHATSAPP */
+
     .wa {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+
       background: #25d366;
       border-color: #1ea952;
+
       text-decoration: none;
-      color: #fff !important
+
+      color: #fff !important;
     }
 
     @media(prefers-reduced-motion:reduce) {
+
       * {
         animation: none !important;
-        transition: none !important
+        transition: none !important;
       }
 
       .bl {
-        transform: none
+        transform: none;
       }
     }
   </style>
@@ -689,350 +814,1781 @@
 
 <body class="lock">
 
+  <!-- INTRO -->
+
   <div id="intro" role="button" tabindex="0">
+
     <div class="env">
-      <div class="sub">Una carta sellada para mi amor</div>
-      <div class="script" style="font-size:3rem;line-height:1.2">Con mucho cariño</div>
-      <div class="seal">♥</div>
-      <div class="tap">Toca para abrir</div>
+
+      <div class="sub">
+        Una carta sellada para mi amor
+      </div>
+
+      <div
+        class="script"
+        style="font-size:3rem;line-height:1.2">
+        Con mucho cariño
+      </div>
+
+      <div class="seal">
+        ♥
+      </div>
+
+      <div class="tap">
+        Toca para abrir
+      </div>
+
     </div>
+
   </div>
+
   <div id="petals"></div>
   <div id="confetti"></div>
-  <audio id="song" loop preload="auto" src="assets/musica.mp3"></audio>
-  <button type="button" id="mbtn" aria-label="Música">🔊</button>
+
+  <!-- MÚSICA -->
+
+  <audio
+    id="song"
+    loop
+    preload="auto"
+    src="assets/musica.mp3">
+  </audio>
+
+  <button
+    type="button"
+    id="mbtn"
+    aria-label="Música">
+    🔊
+  </button>
 
   <main>
+
+    <!-- INICIO -->
+
     <section class="rv">
-      <p class="sub">Mi Amor</p>
-      <h1 class="script shine">Respira. No estás sola.</h1>
-      <div class="orn">✦ ❦ ✦</div>
-      <p class="big">Sé que estás cansada. Que el trabajo, las clases y la casa pesan, y que a veces parece que no hay
-        hora del día que alcance.</p>
-      <p class="big">Esta pequeña web es para decirte una cosa: <b>estoy contigo</b>, hoy y todos los días.</p>
-      <p class="sub" style="margin-top:22px">Llevamos <b id="d" style="color:var(--gold)">0</b> días juntos, y en cada
-        uno de ellos te admiro un poco más.</p>
+
+      <p class="sub">
+        Mi Amor
+      </p>
+
+      <h1 class="script shine">
+        Respira. No estás sola.
+      </h1>
+
+      <div class="orn">
+        ✦ ❦ ✦
+      </div>
+
+      <p class="big">
+        Sé que estás cansada. Que el trabajo, las clases y la casa pesan,
+        y que a veces parece que no hay hora del día que alcance.
+      </p>
+
+      <p class="big">
+        Esta pequeña web es para decirte una cosa:
+        <b>estoy contigo</b>, hoy y todos los días.
+      </p>
+
+      <p
+        class="sub"
+        style="margin-top:22px">
+
+        Llevamos
+        <b
+          id="d"
+          style="color:var(--gold)">
+          0
+        </b>
+        días juntos, y en cada uno de ellos
+        te admiro un poco más.
+
+      </p>
+
     </section>
 
-    <!-- CUENTA REGRESIVA -->
+
+    <!-- CONTADOR -->
+
     <section>
-      <h2 class="script shine rv">Contando los días</h2>
-      <div class="orn rv">❦</div>
-      <p class="sub rv" id="cdlabel">Para nuestro próximo gran día</p>
+
+      <h2 class="script shine rv">
+        Contando los días
+      </h2>
+
+      <div class="orn rv">
+        ❦
+      </div>
+
+      <p
+        class="sub rv"
+        id="cdlabel">
+        Para nuestro próximo aniversario ♥
+      </p>
+
       <div class="cd rv">
-        <div class="box"><b id="cd-d">0</b><small>Días</small></div>
-        <div class="box"><b id="cd-h">0</b><small>Horas</small></div>
-        <div class="box"><b id="cd-m">0</b><small>Min</small></div>
-        <div class="box"><b id="cd-s">0</b><small>Seg</small></div>
+
+        <div class="box">
+          <b id="cd-d">0</b>
+          <small>Días</small>
+        </div>
+
+        <div class="box">
+          <b id="cd-h">0</b>
+          <small>Horas</small>
+        </div>
+
+        <div class="box">
+          <b id="cd-m">0</b>
+          <small>Min</small>
+        </div>
+
+        <div class="box">
+          <b id="cd-s">0</b>
+          <small>Seg</small>
+        </div>
+
       </div>
+
     </section>
 
+
+    <!-- TODO LO QUE LLEVA ENCIMA -->
+
     <section>
-      <h2 class="script shine rv">Todo lo que llevas encima</h2>
-      <div class="orn rv">❦</div>
-      <div class="chips rv"><span>Trabajo</span><span>Clases</span><span>La casa</span><span>Mil cosas pendientes</span>
+
+      <h2 class="script shine rv">
+        Todo lo que llevas encima
+      </h2>
+
+      <div class="orn rv">
+        ❦
       </div>
+
+      <div class="chips rv">
+
+        <span>Trabajo</span>
+        <span>Clases</span>
+        <span>La casa</span>
+        <span>Mil cosas pendientes</span>
+
+      </div>
+
       <div class="frame rv">
-        <p class="big" style="margin:0">Y aun así, cada día te levantas y sigues. <br>Eso no lo hace cualquiera. Eso lo
-          hace una mujer <i>extraordinaria</i>.</p>
+
+        <p
+          class="big"
+          style="margin:0">
+
+          Y aun así, cada día te levantas y sigues.
+          <br>
+
+          Eso no lo hace cualquiera.
+          Eso lo hace una mujer
+          <i>extraordinaria</i>.
+
+        </p>
+
       </div>
+
     </section>
 
+
+    <!-- LA MUJER QUE ERES -->
+
     <section>
-      <h2 class="script shine rv">La mujer que eres</h2>
-      <div class="orn rv">❦</div>
+
+      <h2 class="script shine rv">
+        La mujer que eres
+      </h2>
+
+      <div class="orn rv">
+        ❦
+      </div>
+
       <div class="traits">
-        <div class="frame rv"><b>Fuerte</b><small>Aguantas más de lo que crees</small></div>
-        <div class="frame rv"><b>Valiente</b><small>Nunca te rindes ante lo difícil</small></div>
-        <div class="frame rv"><b>Trabajadora</b><small>Das lo mejor de ti siempre</small></div>
-        <div class="frame rv"><b>Inteligente</b><small>Llegarás tan lejos como quieras</small></div>
+
+        <div class="frame rv">
+          <b>Fuerte</b>
+          <small>
+            Aguantas más de lo que crees
+          </small>
+        </div>
+
+        <div class="frame rv">
+          <b>Valiente</b>
+          <small>
+            Nunca te rindes ante lo difícil
+          </small>
+        </div>
+
+        <div class="frame rv">
+          <b>Trabajadora</b>
+          <small>
+            Das lo mejor de ti siempre
+          </small>
+        </div>
+
+        <div class="frame rv">
+          <b>Inteligente</b>
+          <small>
+            Llegarás tan lejos como quieras
+          </small>
+        </div>
+
       </div>
-      <p class="sub rv" style="margin-top:18px">Y lo que más me gusta: que me encanta todo de ti, mi amor.</p>
+
+      <p
+        class="sub rv"
+        style="margin-top:18px">
+
+        Y lo que más me gusta:
+        que me encanta todo de ti, mi amor.
+
+      </p>
+
     </section>
 
-    <!-- RAZONES POR LAS QUE TE AMO -->
+
+    <!-- RAZONES -->
+
     <section>
-      <h2 class="script shine rv">Razones por las que te amo</h2>
-      <p class="sub rv">Toca cada Razón</p>
-      <div class="grid rv" id="reasons">
-        <div class="frame ow"><span class="sm">Razón</span><b>Tu sonrisa</b>
-          <p>Ilumina hasta mis peores días y me hace olvidar cualquier problema.</p>
+
+      <h2 class="script shine rv">
+        Razones por las que te amo
+      </h2>
+
+      <p class="sub rv">
+        Toca cada Razón
+      </p>
+
+      <div
+        class="grid rv"
+        id="reasons">
+
+        <div class="frame ow">
+
+          <span class="sm">
+            Razón
+          </span>
+
+          <b>
+            Tu sonrisa
+          </b>
+
+          <p>
+            Ilumina hasta mis peores días
+            y me hace olvidar cualquier problema.
+          </p>
+
         </div>
-        <div class="frame ow"><span class="sm">Razón</span><b>Tu fuerza</b>
-          <p>La forma en que enfrentas todo sin rendirte me inspira cada día.</p>
+
+
+        <div class="frame ow">
+
+          <span class="sm">
+            Razón
+          </span>
+
+          <b>
+            Tu fuerza
+          </b>
+
+          <p>
+            La forma en que enfrentas todo
+            sin rendirte me inspira cada día.
+          </p>
+
         </div>
-        <div class="frame ow"><span class="sm">Razón</span><b>Tu corazón</b>
-          <p>Cuidas a todos a tu alrededor, incluso cuando tú misma necesitas que te cuiden.</p>
+
+
+        <div class="frame ow">
+
+          <span class="sm">
+            Razón
+          </span>
+
+          <b>
+            Tu corazón
+          </b>
+
+          <p>
+            Cuidas a todos a tu alrededor,
+            incluso cuando tú misma necesitas
+            que te cuiden.
+          </p>
+
         </div>
-        <div class="frame ow"><span class="sm">Razón</span><b>Cómo me haces sentir</b>
-          <p>A tu lado todo pesa menos y todo tiene más sentido.</p>
+
+
+        <div class="frame ow">
+
+          <span class="sm">
+            Razón
+          </span>
+
+          <b>
+            Cómo me haces sentir
+          </b>
+
+          <p>
+            A tu lado todo pesa menos
+            y todo tiene más sentido.
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section>
-      <h2 class="script shine rv">Un momento para ti</h2>
-      <p class="sub rv">Dale un respiro a la cabeza. Toca y respira conmigo.</p>
-      <div class="breath rv" id="breath">Toca</div>
-      <p class="sub" id="bt" style="min-height:1.6em"></p>
-    </section>
+
+    <!-- RESPIRACIÓN -->
 
     <section>
-      <h2 class="script shine rv">Ábrela cuando…</h2>
-      <p class="sub rv">Toca cada carta</p>
-      <div class="grid" id="owgrid">
-        <div class="frame ow rv"><span class="sm">Ábrela cuando</span><b>estés agotada</b>
-          <p>Descansar no es rendirse. Hoy puedes parar un poco: el mundo puede esperar, tú no tienes que poder con
-            todo.</p>
-        </div>
-        <div class="frame ow rv"><span class="sm">Ábrela cuando</span><b>sientas que no llegas</b>
-          <p>Llegas. Siempre has llegado. Paso a paso, y yo voy a tu lado. Lo estás haciendo mejor de lo que crees.</p>
-        </div>
-        <div class="frame ow rv"><span class="sm">Ábrela cuando</span><b>dudes de ti</b>
-          <p>Recuerda todo lo que ya has logrado. Cada reto que superaste te ha traído hasta aquí. Confío en ti con los
-            ojos cerrados.</p>
-        </div>
+
+      <h2 class="script shine rv">
+        Un momento para ti
+      </h2>
+
+      <p class="sub rv">
+        Dale un respiro a la cabeza.
+        Toca y respira conmigo.
+      </p>
+
+      <div
+        class="breath rv"
+        id="breath">
+        Toca
       </div>
+
+      <p
+        class="sub"
+        id="bt"
+        style="min-height:1.6em">
+      </p>
+
     </section>
 
-    <!-- LINEA DE TIEMPO -->
+
+    <!-- ÁBRELA CUANDO -->
+
     <section>
-      <h2 class="script shine rv">Nuestra historia</h2>
-      <div class="orn rv">❦</div>
+
+      <h2 class="script shine rv">
+        Ábrela cuando…
+      </h2>
+
+      <p class="sub rv">
+        Toca cada carta
+      </p>
+
+      <div
+        class="grid"
+        id="owgrid">
+
+        <div class="frame ow rv">
+
+          <span class="sm">
+            Ábrela cuando
+          </span>
+
+          <b>
+            estés agotada
+          </b>
+
+          <p>
+            Descansar no es rendirse.
+            Hoy puedes parar un poco:
+            el mundo puede esperar,
+            tú no tienes que poder con todo.
+          </p>
+
+        </div>
+
+
+        <div class="frame ow rv">
+
+          <span class="sm">
+            Ábrela cuando
+          </span>
+
+          <b>
+            sientas que no llegas
+          </b>
+
+          <p>
+            Llegas.
+            Siempre has llegado.
+            Paso a paso, y yo voy a tu lado.
+            Lo estás haciendo mejor de lo que crees.
+          </p>
+
+        </div>
+
+
+        <div class="frame ow rv">
+
+          <span class="sm">
+            Ábrela cuando
+          </span>
+
+          <b>
+            dudes de ti
+          </b>
+
+          <p>
+            Recuerda todo lo que ya has logrado.
+            Cada reto que superaste te ha traído
+            hasta aquí.
+            Confío en ti con los ojos cerrados.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NUESTRA HISTORIA -->
+
+    <section>
+
+      <h2 class="script shine rv">
+        Nuestra historia
+      </h2>
+
+      <div class="orn rv">
+        ❦
+      </div>
+
       <div class="tl rv">
-        <div class="ev"><b>El día que te conocí</b><p>Supe que algo en mi vida había cambiado para bien.</p></div>
-        <div class="ev"><b>Nuestra primera cita</b><p>Reí más que en mucho tiempo, y quise que hubiera una segunda.</p></div>
-        <div class="ev"><b>Cuando decidimos ir en serio</b><p>Elegirte cada día se volvió lo más fácil del mundo.</p></div>
-        <div class="ev"><b>Hoy</b><p>Sigo eligiéndote, más seguro que nunca.</p></div>
+
+        <div class="ev">
+
+          <b>
+            El día que te conocí
+          </b>
+
+          <p>
+            Supe que algo en mi vida
+            había cambiado para bien.
+          </p>
+
+        </div>
+
+
+        <div class="ev">
+
+          <b>
+            Nuestra primera cita
+          </b>
+
+          <p>
+            Reí más que en mucho tiempo,
+            y quise que hubiera una segunda.
+          </p>
+
+        </div>
+
+
+        <div class="ev">
+
+          <b>
+            Cuando decidimos ir en serio
+          </b>
+
+          <p>
+            Elegirte cada día se volvió
+            lo más fácil del mundo.
+          </p>
+
+        </div>
+
+
+        <div class="ev">
+
+          <b>
+            Hoy
+          </b>
+
+          <p>
+            Sigo eligiéndote,
+            más seguro que nunca.
+          </p>
+
+        </div>
+
       </div>
+
     </section>
 
-    <!-- GALERIA DE FOTOS -->
+
+    <!-- GALERÍA -->
+
     <section>
-      <h2 class="script shine rv">Nuestros momentos</h2>
+
+      <h2 class="script shine rv">
+        Nuestros momentos
+      </h2>
+
       <div class="gal rv">
-        <div class="ph"><img src="assets/foto1.jpg" alt="Foto 1" onerror="this.style.display='none'; this.parentElement.textContent='♥';"></div>
-        <div class="ph"><img src="assets/foto2.jpg" alt="Foto 2" onerror="this.style.display='none'; this.parentElement.textContent='♥';"></div>
-        <div class="ph"><img src="assets/foto3.jpg" alt="Foto 3" onerror="this.style.display='none'; this.parentElement.textContent='♥';"></div>
-        <div class="ph"><img src="assets/foto4.jpg" alt="Foto 4" onerror="this.style.display='none'; this.parentElement.textContent='♥';"></div>
+
+        <div class="ph">
+          <img
+            src="assets/foto1.jpg"
+            alt="Foto 1"
+            onerror="this.style.display='none'; this.parentElement.textContent='♥';">
+        </div>
+
+        <div class="ph">
+          <img
+            src="assets/foto2.jpg"
+            alt="Foto 2"
+            onerror="this.style.display='none'; this.parentElement.textContent='♥';">
+        </div>
+
+        <div class="ph">
+          <img
+            src="assets/foto3.jpg"
+            alt="Foto 3"
+            onerror="this.style.display='none'; this.parentElement.textContent='♥';">
+        </div>
+
+        <div class="ph">
+          <img
+            src="assets/foto4.jpg"
+            alt="Foto 4"
+            onerror="this.style.display='none'; this.parentElement.textContent='♥';">
+        </div>
+
       </div>
+
     </section>
 
-    <section>
-      <h2 class="script shine rv">Lo que sueño contigo</h2>
-      <div class="orn rv">💍 ♥ 🍼</div>
-      <div class="frame rv">
-        <p class="big" style="margin:0">Sueño con el día en que seas <b>mi esposa</b> y la <b>mamá de nuestro
-            bebé</b>.<br><br>Sé que serás una mamá increíble, tan cariñosa y fuerte como eres conmigo.</p>
-      </div>
-    </section>
+
+    <!-- SUEÑO -->
 
     <section>
-      <h2 class="script shine rv">Lo que yo haré por ti</h2>
-      <div class="orn rv">❦</div>
+
+      <h2 class="script shine rv">
+        Lo que sueño contigo
+      </h2>
+
+      <div class="orn rv">
+        💍 ♥ 🍼
+      </div>
+
       <div class="frame rv">
+
+        <p
+          class="big"
+          style="margin:0">
+
+          Sueño con el día en que seas
+          <b>mi esposa</b>
+          y la
+          <b>mamá de nuestro bebé</b>.
+
+          <br><br>
+
+          Sé que serás una mamá increíble,
+          tan cariñosa y fuerte como eres conmigo.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- LO QUE HARÉ -->
+
+    <section>
+
+      <h2 class="script shine rv">
+        Lo que yo haré por ti
+      </h2>
+
+      <div class="orn rv">
+        ❦
+      </div>
+
+      <div class="frame rv">
+
         <ul class="list">
-          <li>Escucharte cuando necesites desahogarte.</li>
-          <li>Ayudarte en casa para que tengas un rato libre.</li>
-          <li>Abrazarte fuerte los días difíciles.</li>
-          <li>Celebrar contigo cada logro, grande o pequeño.</li>
-          <li>Construir contigo la familia que soñamos.</li>
+
+          <li>
+            Escucharte cuando necesites desahogarte.
+          </li>
+
+          <li>
+            Ayudarte en casa para que tengas un rato libre.
+          </li>
+
+          <li>
+            Abrazarte fuerte los días difíciles.
+          </li>
+
+          <li>
+            Celebrar contigo cada logro,
+            grande o pequeño.
+          </li>
+
+          <li>
+            Construir contigo la familia que soñamos.
+          </li>
+
         </ul>
+
       </div>
+
     </section>
 
+
+    <!-- CARTA FINAL -->
+
     <section>
-      <h2 class="script shine rv">Una última carta</h2>
-      <div class="orn rv">✦ ❦ ✦</div>
-      <p class="hint rv" id="lockhint">Ve completando la página para desbloquear esta carta ♥</p>
-      <div class="prog rv"><i id="progbar"></i></div>
-      <button id="btn" disabled>Romper el sello ♥</button>
-      <div id="msg" class="frame">
-        <span class="seal">♥</span>
-        <div id="typed"></div>
-        <p class="script sign" id="sign">Siempre tuyo ♥</p>
+
+      <h2 class="script shine rv">
+        Una última carta
+      </h2>
+
+      <div class="orn rv">
+        ✦ ❦ ✦
       </div>
+
+      <p
+        class="hint rv"
+        id="lockhint">
+
+        Ve completando la página
+        para desbloquear esta carta ♥
+
+      </p>
+
+      <div class="prog rv">
+        <i id="progbar"></i>
+      </div>
+
+      <button
+        id="btn"
+        disabled>
+
+        Romper el sello ♥
+
+      </button>
+
+
+      <div
+        id="msg"
+        class="frame">
+
+        <span class="seal">
+          ♥
+        </span>
+
+        <div id="typed"></div>
+
+        <p
+          class="script sign"
+          id="sign">
+
+          Siempre tuyo ♥
+
+        </p>
+
+      </div>
+
+
+      <!-- RAMO -->
+
       <div id="gift">
-        <p class="script shine" style="font-size:2.3rem;margin:0 0 6px">Y estas son para ti</p>
-        <svg viewBox="0 0 300 330" role="img" aria-label="Ramo de rosas">
+
+        <p
+          class="script shine"
+          style="font-size:2.3rem;margin:0 0 6px">
+
+          Y estas son para ti
+
+        </p>
+
+
+        <svg
+          viewBox="0 0 300 330"
+          role="img"
+          aria-label="Ramo de rosas">
+
           <defs>
+
             <g id="rose">
-              <circle r="26" fill="#c94f73" />
-              <circle r="20" fill="#e0708f" />
-              <circle r="13" fill="#eb8da6" />
-              <circle r="6" fill="#f8b9c8" />
-              <path d="M-11 0a11 11 0 0 1 22 0M-7 3a7 7 0 0 0 14 0M-17 -5a18 18 0 0 1 30 -10" stroke="#a8385a"
-                fill="none" stroke-width="2" stroke-linecap="round" />
+
+              <circle
+                r="26"
+                fill="#c94f73" />
+
+              <circle
+                r="20"
+                fill="#e0708f" />
+
+              <circle
+                r="13"
+                fill="#eb8da6" />
+
+              <circle
+                r="6"
+                fill="#f8b9c8" />
+
+              <path
+                d="M-11 0a11 11 0 0 1 22 0M-7 3a7 7 0 0 0 14 0M-17 -5a18 18 0 0 1 30 -10"
+                stroke="#a8385a"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round" />
+
             </g>
+
           </defs>
-          <g stroke="#3f7a4a" stroke-width="5" stroke-linecap="round" fill="none">
+
+
+          <g
+            stroke="#3f7a4a"
+            stroke-width="5"
+            stroke-linecap="round"
+            fill="none">
+
             <path d="M150 85Q150 150 150 225" />
             <path d="M98 108Q110 170 145 225" />
             <path d="M202 108Q190 170 155 225" />
             <path d="M62 150Q90 190 142 228" />
             <path d="M238 150Q210 190 158 228" />
+
           </g>
+
+
           <g fill="#4f9a5c">
-            <ellipse cx="88" cy="182" rx="26" ry="10" transform="rotate(-30 88 182)" />
-            <ellipse cx="212" cy="182" rx="26" ry="10" transform="rotate(30 212 182)" />
-            <ellipse cx="120" cy="140" rx="20" ry="8" transform="rotate(-50 120 140)" />
-            <ellipse cx="180" cy="140" rx="20" ry="8" transform="rotate(50 180 140)" />
+
+            <ellipse
+              cx="88"
+              cy="182"
+              rx="26"
+              ry="10"
+              transform="rotate(-30 88 182)" />
+
+            <ellipse
+              cx="212"
+              cy="182"
+              rx="26"
+              ry="10"
+              transform="rotate(30 212 182)" />
+
+            <ellipse
+              cx="120"
+              cy="140"
+              rx="20"
+              ry="8"
+              transform="rotate(-50 120 140)" />
+
+            <ellipse
+              cx="180"
+              cy="140"
+              rx="20"
+              ry="8"
+              transform="rotate(50 180 140)" />
+
           </g>
-          <g class="bl" style="animation-delay:.2s">
-            <use href="#rose" transform="translate(65,150) scale(.9)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:.2s">
+
+            <use
+              href="#rose"
+              transform="translate(65,150) scale(.9)" />
+
           </g>
-          <g class="bl" style="animation-delay:.4s">
-            <use href="#rose" transform="translate(235,150) scale(.9)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:.4s">
+
+            <use
+              href="#rose"
+              transform="translate(235,150) scale(.9)" />
+
           </g>
-          <g class="bl" style="animation-delay:.6s">
-            <use href="#rose" transform="translate(100,105)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:.6s">
+
+            <use
+              href="#rose"
+              transform="translate(100,105)" />
+
           </g>
-          <g class="bl" style="animation-delay:.8s">
-            <use href="#rose" transform="translate(200,105)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:.8s">
+
+            <use
+              href="#rose"
+              transform="translate(200,105)" />
+
           </g>
-          <g class="bl" style="animation-delay:1s">
-            <use href="#rose" transform="translate(150,80) scale(1.15)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:1s">
+
+            <use
+              href="#rose"
+              transform="translate(150,80) scale(1.15)" />
+
           </g>
-          <g class="bl" style="animation-delay:1.2s">
-            <use href="#rose" transform="translate(120,152) scale(1.05)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:1.2s">
+
+            <use
+              href="#rose"
+              transform="translate(120,152) scale(1.05)" />
+
           </g>
-          <g class="bl" style="animation-delay:1.4s">
-            <use href="#rose" transform="translate(180,152) scale(1.05)" />
+
+
+          <g
+            class="bl"
+            style="animation-delay:1.4s">
+
+            <use
+              href="#rose"
+              transform="translate(180,152) scale(1.05)" />
+
           </g>
-          <path d="M58 185L242 185L170 318L130 318Z" fill="#f6e2d8" stroke="#c99a88" stroke-width="2" />
-          <path d="M100 185L150 318M200 185L150 318" stroke="#e8c9bc" stroke-width="2" fill="none" />
-          <g fill="#e0708f" stroke="#c99a88" stroke-width="1.5">
-            <path d="M150 262Q118 236 112 268Q120 284 150 262Z" />
-            <path d="M150 262Q182 236 188 268Q180 284 150 262Z" />
-            <circle cx="150" cy="264" r="9" />
+
+
+          <path
+            d="M58 185L242 185L170 318L130 318Z"
+            fill="#f6e2d8"
+            stroke="#c99a88"
+            stroke-width="2" />
+
+          <path
+            d="M100 185L150 318M200 185L150 318"
+            stroke="#e8c9bc"
+            stroke-width="2"
+            fill="none" />
+
+
+          <g
+            fill="#e0708f"
+            stroke="#c99a88"
+            stroke-width="1.5">
+
+            <path
+              d="M150 262Q118 236 112 268Q120 284 150 262Z" />
+
+            <path
+              d="M150 262Q182 236 188 268Q180 284 150 262Z" />
+
+            <circle
+              cx="150"
+              cy="264"
+              r="9" />
+
           </g>
+
         </svg>
-        <p class="big" style="margin-top:6px">Porque mereces flores todos los días.<br>Te quiero, mi amor. ♥</p>
+
+
+        <p
+          class="big"
+          style="margin-top:6px">
+
+          Porque mereces flores todos los días.
+          <br>
+
+          Te quiero, mi amor. ♥
+
+        </p>
+
       </div>
+
     </section>
-    <footer class="rv"><span class="heart">♥</span><br>Escrito con todo mi amor, para ti ✦</footer>
+
+
+    <footer class="rv">
+
+      <span class="heart">
+        ♥
+      </span>
+
+      <br>
+
+      Escrito con todo mi amor, para ti ✦
+
+    </footer>
+
   </main>
 
+
   <script>
+
+    /*
+     * ============================================
+     * CONFIGURACIÓN DE LA RELACIÓN
+     * ============================================
+     */
+
+    // Día en que comenzó la relación
     var START = new Date("2026-05-20T00:00:00");
-    // EDITA esta fecha por la fecha especial real (aniversario, cumpleaños, etc.)
-    var TARGET = new Date("2026-12-24T00:00:00");
-    var LETTER = "Mi amor:\n\nSé que estás cansada y que llevas mucho encima. Quiero que sepas que estoy muy orgulloso de ti: de tu esfuerzo, de tu fuerza y de la mujer increíble que eres. Me encanta todo de ti.\n\nNo tienes que poder con todo sola. Yo estoy aquí, a tu lado, para lo bueno y para lo difícil.\n\nSueño con el día en que seas mi esposa y la mamá de nuestro bebé. Sé que serás la mejor.\n\nTe quiero más de lo que las palabras alcanzan a decir.";
-    function $(i) { return document.getElementById(i) }
-    $("d").textContent = Math.max(0, Math.floor((Date.now() - START.getTime()) / 864e5));
+
+
+    /*
+     * ============================================
+     * PRÓXIMO ANIVERSARIO MENSUAL
+     * ============================================
+     *
+     * El aniversario es el día 20 de cada mes.
+     *
+     * Si hoy es antes del 20:
+     *   → apunta al 20 de este mes.
+     *
+     * Si hoy es 20 o después:
+     *   → apunta al 20 del siguiente mes.
+     *
+     */
+
+    function getNextAnniversary() {
+
+      var now = new Date();
+
+      var year = now.getFullYear();
+      var month = now.getMonth();
+
+      var target = new Date(
+        year,
+        month,
+        20,
+        0,
+        0,
+        0
+      );
+
+      if (now >= target) {
+
+        target = new Date(
+          year,
+          month + 1,
+          20,
+          0,
+          0,
+          0
+        );
+
+      }
+
+      return target;
+    }
+
+
+    var TARGET = getNextAnniversary();
+
+
+    /*
+     * ============================================
+     * FUNCIONES GENERALES
+     * ============================================
+     */
+
+    function $(i) {
+      return document.getElementById(i);
+    }
+
+
+    /*
+     * ============================================
+     * DÍAS DE RELACIÓN
+     * ============================================
+     */
+
+    function updateRelationshipDays() {
+
+      var diff =
+        Date.now() -
+        START.getTime();
+
+      var days =
+        Math.max(
+          0,
+          Math.floor(diff / 864e5)
+        );
+
+      $("d").textContent = days;
+    }
+
+    updateRelationshipDays();
+
+
+    /*
+     * ============================================
+     * PÉTALOS
+     * ============================================
+     */
 
     function petals() {
-      var box = $("petals"), c = ["#ff9dbb", "#ff6f9c", "#ffc2b0", "#ffb3cc"];
+
+      var box = $("petals");
+
+      var c = [
+        "#ff9dbb",
+        "#ff6f9c",
+        "#ffc2b0",
+        "#ffb3cc"
+      ];
+
       for (var i = 0; i < 24; i++) {
-        var e = document.createElement("i"); e.className = "p";
-        var s = 8 + Math.random() * 12;
-        e.style.cssText = "left:" + Math.random() * 100 + "%;width:" + s + "px;height:" + s + "px;background:" + c[i % 4] + ";animation-duration:" + (9 + Math.random() * 10) + "s;animation-delay:" + (-Math.random() * 15) + "s;--dx:" + (Math.random() * 160 - 80) + "px";
+
+        var e =
+          document.createElement("i");
+
+        e.className = "p";
+
+        var s =
+          8 + Math.random() * 12;
+
+        e.style.cssText =
+          "left:" +
+          Math.random() * 100 +
+          "%;" +
+
+          "width:" +
+          s +
+          "px;" +
+
+          "height:" +
+          s +
+          "px;" +
+
+          "background:" +
+          c[i % 4] +
+          ";" +
+
+          "animation-duration:" +
+          (9 + Math.random() * 10) +
+          "s;" +
+
+          "animation-delay:" +
+          (-Math.random() * 15) +
+          "s;" +
+
+          "--dx:" +
+          (Math.random() * 160 - 80) +
+          "px;";
+
         box.appendChild(e);
       }
     }
+
+
+    /*
+     * ============================================
+     * CORAZONES
+     * ============================================
+     */
+
     function heartBurst() {
-      var box = $("confetti"), hearts = ["♥", "💕", "💗", "✦"];
+
+      var box = $("confetti");
+
+      var hearts = [
+        "♥",
+        "💕",
+        "💗",
+        "✦"
+      ];
+
       for (var i = 0; i < 34; i++) {
+
         (function () {
-          var e = document.createElement("span"); e.className = "hb";
-          e.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-          e.style.left = Math.random() * 100 + "%";
-          e.style.setProperty("--dx", (Math.random() * 160 - 80) + "px");
-          e.style.animationDuration = (2.5 + Math.random() * 2) + "s";
-          e.style.animationDelay = (Math.random() * .6) + "s";
+
+          var e =
+            document.createElement("span");
+
+          e.className = "hb";
+
+          e.textContent =
+            hearts[
+              Math.floor(
+                Math.random() *
+                hearts.length
+              )
+            ];
+
+          e.style.left =
+            Math.random() * 100 +
+            "%";
+
+          e.style.setProperty(
+            "--dx",
+            (Math.random() * 160 - 80) +
+            "px"
+          );
+
+          e.style.animationDuration =
+            (2.5 + Math.random() * 2) +
+            "s";
+
+          e.style.animationDelay =
+            (Math.random() * .6) +
+            "s";
+
           box.appendChild(e);
-          setTimeout(function () { e.remove() }, 6000);
+
+          setTimeout(
+            function () {
+              e.remove();
+            },
+            6000
+          );
+
         })();
+
       }
     }
+
+
+    /*
+     * ============================================
+     * ANIMACIONES AL HACER SCROLL
+     * ============================================
+     */
+
     function reveal() {
-      var els = document.querySelectorAll(".rv");
-      if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in") }); return }
-      var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target) } }) }, { threshold: .15 });
-      els.forEach(function (e) { io.observe(e) });
+
+      var els =
+        document.querySelectorAll(".rv");
+
+      if (!("IntersectionObserver" in window)) {
+
+        els.forEach(
+          function (e) {
+            e.classList.add("in");
+          }
+        );
+
+        return;
+      }
+
+      var io =
+        new IntersectionObserver(
+          function (en) {
+
+            en.forEach(
+              function (x) {
+
+                if (x.isIntersecting) {
+
+                  x.target.classList.add("in");
+
+                  io.unobserve(x.target);
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: .15
+          }
+        );
+
+      els.forEach(
+        function (e) {
+          io.observe(e);
+        }
+      );
     }
 
-    // ---- countdown ----
+
+    /*
+     * ============================================
+     * CONTADOR DEL PRÓXIMO ANIVERSARIO
+     * ============================================
+     */
+
+    function updateCountdownTarget() {
+
+      TARGET = getNextAnniversary();
+
+      var targetDate =
+        TARGET.toLocaleDateString(
+          "es-PE",
+          {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          }
+        );
+
+      $("cdlabel").textContent =
+        "Para nuestro próximo aniversario ♥";
+    }
+
+
     function tickCountdown() {
-      var diff = TARGET.getTime() - Date.now();
-      if (diff < 0) diff = 0;
-      var d = Math.floor(diff / 864e5), h = Math.floor(diff / 36e5) % 24, m = Math.floor(diff / 6e4) % 60, s = Math.floor(diff / 1e3) % 60;
-      $("cd-d").textContent = d; $("cd-h").textContent = h; $("cd-m").textContent = m; $("cd-s").textContent = s;
-    }
-    tickCountdown(); setInterval(tickCountdown, 1000);
 
-    // ---- musica (botón flotante) ----
-    var song = $("song"), hasSong = !!song.getAttribute("src");
-    function label() { var p = song.paused; $("mbtn").textContent = p ? "🔇" : "🔊" }
+      /*
+       * Revisamos nuevamente el aniversario
+       * por si cambió de mes mientras la página
+       * estaba abierta.
+       */
+
+      var currentTarget =
+        getNextAnniversary();
+
+      TARGET = currentTarget;
+
+      var diff =
+        TARGET.getTime() -
+        Date.now();
+
+      if (diff < 0) {
+        diff = 0;
+      }
+
+      var d =
+        Math.floor(
+          diff / 864e5
+        );
+
+      var h =
+        Math.floor(
+          diff / 36e5
+        ) % 24;
+
+      var m =
+        Math.floor(
+          diff / 6e4
+        ) % 60;
+
+      var s =
+        Math.floor(
+          diff / 1e3
+        ) % 60;
+
+
+      $("cd-d").textContent = d;
+      $("cd-h").textContent = h;
+      $("cd-m").textContent = m;
+      $("cd-s").textContent = s;
+
+
+      /*
+       * Cuando llegue el aniversario,
+       * actualizamos el objetivo al siguiente.
+       */
+
+      if (
+        diff <= 0
+      ) {
+
+        TARGET =
+          getNextAnniversary();
+
+      }
+
+    }
+
+
+    updateCountdownTarget();
+
+    tickCountdown();
+
+    setInterval(
+      tickCountdown,
+      1000
+    );
+
+
+    /*
+     * ============================================
+     * MÚSICA
+     * ============================================
+     */
+
+    var song =
+      $("song");
+
+    var hasSong =
+      !!song.getAttribute("src");
+
+
+    function label() {
+
+      var p =
+        song.paused;
+
+      $("mbtn").textContent =
+        p ? "🔇" : "🔊";
+    }
+
+
     function startMusic() {
-      if (!hasSong) return;
-      song.volume = 0; var pr = song.play(); if (pr && pr.catch) pr.catch(function () { });
-      var v = 0, f = setInterval(function () { v += .05; if (v >= .7) { v = .7; clearInterval(f) } song.volume = v }, 200);
-      $("mbtn").style.display = "block";
+
+      if (!hasSong) {
+        return;
+      }
+
+      song.volume = 0;
+
+      var pr =
+        song.play();
+
+      if (
+        pr &&
+        pr.catch
+      ) {
+        pr.catch(
+          function () {}
+        );
+      }
+
+      var v = 0;
+
+      var f =
+        setInterval(
+          function () {
+
+            v += .05;
+
+            if (v >= .7) {
+
+              v = .7;
+
+              clearInterval(f);
+
+            }
+
+            song.volume = v;
+
+          },
+          200
+        );
+
+      $("mbtn").style.display =
+        "block";
     }
+
+
     function toggleMusic() {
-      if (!hasSong) return;
-      if (song.paused) { song.volume = .7; var pr = song.play(); if (pr && pr.catch) pr.catch(function () { }) } else song.pause();
+
+      if (!hasSong) {
+        return;
+      }
+
+      if (song.paused) {
+
+        song.volume = .7;
+
+        var pr =
+          song.play();
+
+        if (
+          pr &&
+          pr.catch
+        ) {
+          pr.catch(
+            function () {}
+          );
+        }
+
+      } else {
+
+        song.pause();
+
+      }
+
     }
-    song.onplay = song.onpause = label;
-    $("mbtn").onclick = toggleMusic;
+
+
+    song.onplay =
+      song.onpause =
+      label;
+
+    $("mbtn").onclick =
+      toggleMusic;
+
+
+    /*
+     * ============================================
+     * ABRIR CARTA INICIAL
+     * ============================================
+     */
 
     function openIntro() {
-      $("intro").classList.add("gone"); document.body.classList.remove("lock");
-      petals(); startMusic(); setTimeout(reveal, 300);
-    }
-    $("intro").onclick = openIntro;
-    $("intro").onkeydown = function (e) { if (e.key === "Enter" || e.key === " ") openIntro() };
 
-    // ---- progreso para desbloquear la carta final ----
-    var progress = { cards: new Set(), breath: false };
-    var TOTAL = 3 /*cartas*/ + 1 /*respiracion*/;
-    function updateProgress() {
-      var done = progress.cards.size + (progress.breath ? 1 : 0);
-      var pct = Math.min(100, Math.round(done / TOTAL * 100));
-      $("progbar").style.width = pct + "%";
-      if (done >= TOTAL) {
-        $("btn").disabled = false;
-        $("lockhint").textContent = "Ya puedes romper el sello ♥";
-      } else {
-        $("lockhint").textContent = "Ve completando la página para desbloquear esta carta (" + done + "/" + TOTAL + ") ♥";
-      }
+      $("intro")
+        .classList
+        .add("gone");
+
+      document.body
+        .classList
+        .remove("lock");
+
+      petals();
+
+      startMusic();
+
+      setTimeout(
+        reveal,
+        300
+      );
     }
+
+
+    $("intro").onclick =
+      openIntro;
+
+
+    $("intro").onkeydown =
+      function (e) {
+
+        if (
+          e.key === "Enter" ||
+          e.key === " "
+        ) {
+
+          openIntro();
+
+        }
+
+      };
+
+
+    /*
+     * ============================================
+     * PROGRESO DE LA CARTA FINAL
+     * ============================================
+     */
+
+    var progress = {
+
+      cards: new Set(),
+
+      breath: false
+
+    };
+
+
+    var TOTAL =
+      3 + 1;
+
+
+    function updateProgress() {
+
+      var done =
+        progress.cards.size +
+        (progress.breath ? 1 : 0);
+
+      var pct =
+        Math.min(
+          100,
+          Math.round(
+            done / TOTAL * 100
+          )
+        );
+
+
+      $("progbar")
+        .style
+        .width =
+        pct + "%";
+
+
+      if (
+        done >= TOTAL
+      ) {
+
+        $("btn").disabled =
+          false;
+
+        $("lockhint").textContent =
+          "Ya puedes romper el sello ♥";
+
+      } else {
+
+        $("lockhint").textContent =
+          "Ve completando la página para desbloquear esta carta (" +
+          done +
+          "/" +
+          TOTAL +
+          ") ♥";
+
+      }
+
+    }
+
+
     updateProgress();
 
-    // razones (no cuentan para el progreso, solo son para disfrutar)
-    document.querySelectorAll("#reasons .ow").forEach(function (c) { c.onclick = function () { c.classList.toggle("open") } });
 
-    // cartas "abrela cuando" (sí cuentan)
-    document.querySelectorAll("#owgrid .ow").forEach(function (c, idx) {
-      c.onclick = function () {
-        c.classList.toggle("open");
-        progress.cards.add(idx);
-        updateProgress();
-      }
-    });
+    /*
+     * ============================================
+     * RAZONES
+     * ============================================
+     */
+
+    document
+      .querySelectorAll(
+        "#reasons .ow"
+      )
+      .forEach(
+        function (c) {
+
+          c.onclick =
+            function () {
+
+              c.classList.toggle(
+                "open"
+              );
+
+            };
+
+        }
+      );
+
+
+    /*
+     * ============================================
+     * CARTAS "ÁBRELA CUANDO"
+     * ============================================
+     */
+
+    document
+      .querySelectorAll(
+        "#owgrid .ow"
+      )
+      .forEach(
+        function (c, idx) {
+
+          c.onclick =
+            function () {
+
+              c.classList.toggle(
+                "open"
+              );
+
+              progress.cards.add(
+                idx
+              );
+
+              updateProgress();
+
+            };
+
+        }
+      );
+
+
+    /*
+     * ============================================
+     * RESPIRACIÓN
+     * ============================================
+     */
 
     var bt = null;
-    $("breath").onclick = function () {
-      progress.breath = true; updateProgress();
-      if (bt) { clearInterval(bt); bt = null; this.classList.remove("on"); this.textContent = "Toca"; $("bt").textContent = ""; return }
-      var w = ["Inhala…", "Sostén…", "Exhala…"], i = 0, b = this;
-      b.classList.add("on");
-      function step() { b.textContent = w[i % 3]; $("bt").textContent = i % 3 == 0 ? "Toma aire despacio" : i % 3 == 1 ? "Mantén un momento" : "Suelta todo el estrés"; i++ }
-      step(); bt = setInterval(step, 4000);
-    };
 
-    $("btn").onclick = function () {
-      this.style.display = "none"; $("msg").classList.add("show");
-      heartBurst();
-      var i = 0, el = $("typed");
-      (function type() {
-        el.textContent = LETTER.slice(0, i++);
-        if (i <= LETTER.length) setTimeout(type, 40);
-        else { $("sign").classList.add("in"); setTimeout(function () { $("gift").classList.add("show"); heartBurst(); $("gift").scrollIntoView({ behavior: "smooth", block: "center" }) }, 1800) }
-      })();
-    };
+
+    $("breath").onclick =
+      function () {
+
+        progress.breath =
+          true;
+
+        updateProgress();
+
+
+        if (bt) {
+
+          clearInterval(bt);
+
+          bt = null;
+
+          this.classList.remove(
+            "on"
+          );
+
+          this.textContent =
+            "Toca";
+
+          $("bt").textContent =
+            "";
+
+          return;
+
+        }
+
+
+        var w = [
+          "Inhala…",
+          "Sostén…",
+          "Exhala…"
+        ];
+
+        var i = 0;
+
+        var b = this;
+
+
+        b.classList.add(
+          "on"
+        );
+
+
+        function step() {
+
+          b.textContent =
+            w[i % 3];
+
+          $("bt").textContent =
+            i % 3 == 0
+              ? "Toma aire despacio"
+              : i % 3 == 1
+                ? "Mantén un momento"
+                : "Suelta todo el estrés";
+
+          i++;
+
+        }
+
+
+        step();
+
+
+        bt =
+          setInterval(
+            step,
+            4000
+          );
+
+      };
+
+
+    /*
+     * ============================================
+     * CARTA FINAL
+     * ============================================
+     */
+
+    var LETTER =
+      "Mi amor:\n\n" +
+
+      "Sé que estás cansada y que llevas mucho encima. " +
+
+      "Quiero que sepas que estoy muy orgulloso de ti: " +
+
+      "de tu esfuerzo, de tu fuerza y de la mujer increíble que eres. " +
+
+      "Me encanta todo de ti.\n\n" +
+
+      "No tienes que poder con todo sola. " +
+
+      "Yo estoy aquí, a tu lado, para lo bueno y para lo difícil.\n\n" +
+
+      "Sueño con el día en que seas mi esposa " +
+
+      "y la mamá de nuestro bebé. " +
+
+      "Sé que serás la mejor.\n\n" +
+
+      "Te quiero más de lo que las palabras alcanzan a decir.";
+
+
+    $("btn").onclick =
+      function () {
+
+        this.style.display =
+          "none";
+
+        $("msg")
+          .classList
+          .add("show");
+
+        heartBurst();
+
+
+        var i = 0;
+
+        var el =
+          $("typed");
+
+
+        (function type() {
+
+          el.textContent =
+            LETTER.slice(
+              0,
+              i++
+            );
+
+
+          if (
+            i <= LETTER.length
+          ) {
+
+            setTimeout(
+              type,
+              40
+            );
+
+          } else {
+
+            $("sign")
+              .classList
+              .add("in");
+
+
+            setTimeout(
+              function () {
+
+                $("gift")
+                  .classList
+                  .add("show");
+
+                heartBurst();
+
+
+                $("gift")
+                  .scrollIntoView(
+                    {
+                      behavior: "smooth",
+                      block: "center"
+                    }
+                  );
+
+              },
+              1800
+            );
+
+          }
+
+        })();
+
+      };
+
   </script>
+
 </body>
 
 </html>
